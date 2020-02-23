@@ -53,4 +53,18 @@ public class StringHelper {
         Collections.reverse(chars);
         return chars.toString();
     }
+
+    String removeNextDuplicate2(String s) {
+        List<Character> result = new ArrayList<>();
+        for (int i = 0; i < s.length(); i++) {
+            if(i == s.length() - 1) {
+                result.add(s.charAt(i));
+            } else {
+                if(s.charAt(i) != s.charAt(i+1)) {
+                    result.add(s.charAt(i));
+                }
+            }
+        }
+        return result.toString();
+    }
 }
