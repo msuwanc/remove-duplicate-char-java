@@ -5,7 +5,9 @@ public class Main {
         StringHelper stringHelper = new StringHelper();
 
         System.out.println(stringHelper.removeAllDuplicatedChar(input));
+        System.out.println(stringHelper.removeAllDuplicate(input));
 
         System.out.println(stringHelper.removeOnlyNextDuplicateChar(input));
+        System.out.println(stringHelper.removeNextDuplicate(input));
     }
 }

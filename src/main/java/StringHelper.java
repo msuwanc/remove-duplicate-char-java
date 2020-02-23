@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.LinkedHashSet;
-import java.util.List;
+import java.util.*;
 
 public class StringHelper {
     String removeAllDuplicatedChar(String beforeRemoveDuplicateChar) {
@@ -12,6 +9,15 @@ public class StringHelper {
         }
 
         return linkedHashSet.toString();
+    }
+
+    String removeAllDuplicate(String string) {
+        Set<Character> chars = new LinkedHashSet<>();
+        for(int i = 0; i < string.length(); i++) {
+            chars.add(string.charAt(i));
+        }
+
+        return chars.toString();
     }
 
     String removeOnlyNextDuplicateChar(String beforeRemoveDuplicateChar) {
@@ -30,5 +36,21 @@ public class StringHelper {
         Collections.reverse(temporaryListForArrayOfChar);
 
         return temporaryListForArrayOfChar.toString();
+    }
+
+    String removeNextDuplicate(String string) {
+        List<Character> chars = new ArrayList<>();
+        for(int i = 0; i < string.length(); i++) {
+            if(i == string.length()-1) {
+                chars.add(0, string.charAt(i));
+            } else {
+                if(string.charAt(i) != string.charAt(i + 1)) {
+                    chars.add(0, string.charAt(i));
+                }
+            }
+        }
+
+        Collections.reverse(chars);
+        return chars.toString();
     }
 }
