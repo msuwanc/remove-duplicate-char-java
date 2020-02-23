@@ -9,5 +9,7 @@ public class Main {
 
         System.out.println(stringHelper.removeOnlyNextDuplicateChar(input));
         System.out.println(stringHelper.removeNextDuplicate(input));
+
+        System.out.println(stringHelper.removeNextDuplicate2(input));
     }
 }
